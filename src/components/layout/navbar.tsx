@@ -47,17 +47,19 @@ export function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
                 : "/images/logos/coffece-logo-white.png"
             }
             alt="Coffece"
-            width={120}
-            height={40}
-            className="h-12 w-auto dark:hidden"
+            width={200}
+            height={60}
+            className={`h-10 lg:h-14 w-auto dark:hidden ${
+              scrolled ? "mix-blend-multiply" : "mix-blend-screen"
+            }`}
             priority
           />
           <Image
             src="/images/logos/coffece-logo-white.png"
             alt="Coffece"
-            width={120}
-            height={40}
-            className="h-12 w-auto hidden dark:block"
+            width={200}
+            height={60}
+            className="h-10 lg:h-14 w-auto hidden dark:block mix-blend-screen"
             priority
           />
         </Link>

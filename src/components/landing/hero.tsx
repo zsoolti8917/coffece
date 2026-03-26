@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { FloatingBeans } from "@/components/floating-beans";
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 30 },
@@ -20,11 +21,9 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
 
   return (
     <section className="relative min-h-screen flex items-center bg-brand-black overflow-hidden">
-      <div className="absolute inset-0 opacity-[0.03]">
-        <Image src="/images/decorative/coffee-beans-pattern.png" alt="" fill className="object-cover" priority />
-      </div>
+      <FloatingBeans count={16} />
 
-      <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16">
+      <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <motion.p custom={0} variants={fadeUp} initial="hidden" animate="visible"
@@ -72,7 +71,7 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
       </div>
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
         <motion.div animate={{ y: [0, 6, 0] }} transition={{ duration: 1.5, repeat: Infinity }}>
           <ChevronDown className="h-6 w-6 text-gray-600" />
         </motion.div>

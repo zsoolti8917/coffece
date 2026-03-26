@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { FloatingBeans } from "@/components/floating-beans";
 
 interface ProductHeroProps {
   name: string;
@@ -16,8 +17,9 @@ export function ProductHero({ name, tagline, imageSrc, variant, decorativeBg }: 
 
   return (
     <section className={`min-h-[70vh] flex items-center pt-24 relative overflow-hidden ${isDark ? "bg-brand-black" : "bg-brand-gold-light"}`}>
+      <FloatingBeans count={12} />
       {decorativeBg && (
-        <div className="absolute inset-0 opacity-[0.05]">
+        <div className="absolute inset-0 opacity-[0.06]">
           <Image src={decorativeBg} alt="" fill className="object-cover" priority />
         </div>
       )}
