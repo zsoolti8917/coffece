@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { OrderModal } from "@/components/order-picker/order-modal";
@@ -56,10 +57,13 @@ export default function ContactPage() {
   return (
     <>
       <Navbar onOrderClick={() => setOrderOpen(true)} />
-      <main className="bg-white min-h-screen">
+      <main className="bg-background min-h-screen">
         {/* Hero */}
-        <section className="bg-brand-black text-white py-20 px-4">
-          <div className="container mx-auto max-w-4xl text-center">
+        <section className="bg-brand-black text-white py-20 px-4 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.04]">
+            <Image src="/images/decorative/coffee-beans-pattern.png" alt="" fill className="object-cover" />
+          </div>
+          <div className="container mx-auto max-w-4xl text-center relative z-10">
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -213,8 +217,12 @@ export default function ContactPage() {
                 initial={{ opacity: 0, x: 24 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="lg:pl-8"
+                className="lg:pl-8 relative"
               >
+                {/* Decorative background */}
+                <div className="absolute -right-8 -bottom-8 w-64 h-64 opacity-[0.06] pointer-events-none">
+                  <Image src="/images/decorative/coffee-plant.png" alt="" fill className="object-contain" />
+                </div>
                 <h2 className="text-2xl font-bold text-brand-black mb-8">
                   {t("info.emailLabel")}
                 </h2>

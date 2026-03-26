@@ -19,7 +19,7 @@ export function LanguageToggle() {
       variant="ghost"
       size="sm"
       onClick={switchLocale}
-      className="text-xs font-semibold tracking-wider"
+      className="text-xs font-semibold tracking-wider text-foreground"
     >
       {locale === "sk" ? "EN" : "SK"}
     </Button>

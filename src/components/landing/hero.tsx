@@ -46,7 +46,7 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
                 {t("cta")}
               </Button>
               <Button size="lg" variant="outline"
-                className="border-gray-600 text-white hover:bg-white/10 font-medium text-base"
+                className="border-brand-gold/60 text-brand-gold hover:bg-brand-gold/10 font-medium text-base"
                 onClick={() => document.getElementById("why-coffece")?.scrollIntoView({ behavior: "smooth" })}>
                 {t("learnMore")}
               </Button>

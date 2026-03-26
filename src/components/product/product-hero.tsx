@@ -8,14 +8,20 @@ interface ProductHeroProps {
   tagline: string;
   imageSrc: string;
   variant: "original" | "zlaty";
+  decorativeBg?: string;
 }
 
-export function ProductHero({ name, tagline, imageSrc, variant }: ProductHeroProps) {
+export function ProductHero({ name, tagline, imageSrc, variant, decorativeBg }: ProductHeroProps) {
   const isDark = variant === "original";
 
   return (
-    <section className={`min-h-[70vh] flex items-center pt-24 ${isDark ? "bg-brand-black" : "bg-brand-gold-light"}`}>
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className={`min-h-[70vh] flex items-center pt-24 relative overflow-hidden ${isDark ? "bg-brand-black" : "bg-brand-gold-light"}`}>
+      {decorativeBg && (
+        <div className="absolute inset-0 opacity-[0.05]">
+          <Image src={decorativeBg} alt="" fill className="object-cover" priority />
+        </div>
+      )}
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
             <h1 className={`text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 tracking-tight ${isDark ? "text-white" : "text-brand-black"}`}>

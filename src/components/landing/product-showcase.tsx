@@ -23,8 +23,8 @@ export function ProductShowcase() {
             viewport={{ once: true }} transition={{ duration: 0.6 }}>
             <Link href="/original" className="block group">
               <div className="bg-brand-black rounded-2xl p-8 text-center hover:scale-[1.02] transition-transform duration-300 overflow-hidden">
-                <div className="relative w-48 h-64 mx-auto mb-6">
-                  <Image src="/images/products/original-kitchen.png" alt={t("original.name")} fill className="object-contain" />
+                <div className="relative w-64 h-64 mx-auto mb-6">
+                  <Image src="/images/labels/original-label.png" alt={t("original.name")} fill className="object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-1">{t("original.name")}</h3>
                 <p className="text-gray-400 text-sm mb-4">{t("original.type")} · {t("original.region")}</p>
@@ -39,8 +39,8 @@ export function ProductShowcase() {
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.15 }}>
             <Link href="/zlaty-standard" className="block group">
               <div className="bg-brand-gold-light rounded-2xl p-8 text-center border border-brand-gold hover:scale-[1.02] transition-transform duration-300 overflow-hidden">
-                <div className="relative w-48 h-64 mx-auto mb-6">
-                  <Image src="/images/products/zlaty-office.png" alt={t("zlaty.name")} fill className="object-contain" />
+                <div className="relative w-64 h-64 mx-auto mb-6">
+                  <Image src="/images/labels/zlaty-label.png" alt={t("zlaty.name")} fill className="object-contain" />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-black mb-1">{t("zlaty.name")}</h3>
                 <p className="text-brand-gold-dark text-sm mb-4">{t("zlaty.type")} · {t("zlaty.region")}</p>
