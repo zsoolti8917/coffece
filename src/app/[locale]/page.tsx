@@ -9,6 +9,7 @@ import { ProductShowcase } from "@/components/landing/product-showcase";
 import { HowItWorks } from "@/components/landing/how-it-works";
 import { OriginStory } from "@/components/landing/origin-story";
 import { CtaBanner } from "@/components/landing/cta-banner";
+import { OrderModal } from "@/components/order-picker/order-modal";
 
 export default function HomePage() {
   const [orderOpen, setOrderOpen] = useState(false);
@@ -25,7 +26,7 @@ export default function HomePage() {
         <CtaBanner onOrderClick={() => setOrderOpen(true)} />
       </main>
       <Footer />
-      {/* Order picker modal will be added later */}
+      <OrderModal open={orderOpen} onClose={() => setOrderOpen(false)} />
     </>
   );
 }

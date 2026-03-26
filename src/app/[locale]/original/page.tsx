@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/footer";
 import { ProductHero } from "@/components/product/product-hero";
 import { ProductSpecs } from "@/components/product/product-specs";
 import { ProductCta } from "@/components/product/product-cta";
+import { OrderModal } from "@/components/order-picker/order-modal";
 
 export default function OriginalPage() {
   const t = useTranslations("product.original");
@@ -25,6 +26,7 @@ export default function OriginalPage() {
           onOrderClick={() => setOrderOpen(true)} />
       </main>
       <Footer />
+      <OrderModal open={orderOpen} onClose={() => setOrderOpen(false)} preselectedCoffee="original" />
     </>
   );
 }

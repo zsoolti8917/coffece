@@ -12,7 +12,7 @@ export const orderSchema = z.object({
     phone: z.string().min(1),
     message: z.string().optional(),
     gdprConsent: z.literal(true, {
-      errorMap: () => ({ message: "GDPR consent is required" }),
+      message: "GDPR consent is required",
     }),
   }),
 });
