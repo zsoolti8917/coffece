@@ -3,6 +3,7 @@ import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Providers } from "@/components/providers";
+import { CookieBanner } from "@/components/layout/cookie-banner";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -36,6 +37,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <Providers>
             {children}
+            <CookieBanner />
           </Providers>
         </NextIntlClientProvider>
       </body>
