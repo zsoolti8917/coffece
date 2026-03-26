@@ -21,7 +21,7 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
 
   return (
     <section className="relative min-h-screen flex items-center bg-brand-black overflow-hidden">
-      <FloatingBeans count={50} />
+      <FloatingBeans count={250} />
 
       <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
