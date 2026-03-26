@@ -20,7 +20,8 @@ export default function ZlatyStandardPage() {
       <main>
         <ProductHero name={tProducts("name")} tagline={t("hero")}
           imageSrc="/images/products/zlaty-kitchen.jpg" variant="zlaty"
-          decorativeBg="/images/decorative/coffee-plant.png" />
+          decorativeBg="/images/decorative/coffee-plant.png"
+          showBeans={false} />
         <ProductSpecs variant="zlaty" labelSrc="/images/labels/zlaty-label.png"
           decorativeSrc="/images/decorative/coffee-plant.png" />
         <ProductCta productName={tProducts("name")} variant="zlaty"

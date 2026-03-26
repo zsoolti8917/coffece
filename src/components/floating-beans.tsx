@@ -30,7 +30,7 @@ function generateBeans(count: number): Bean[] {
     src: beanSources[Math.floor(Math.random() * beanSources.length)],
     x: Math.random() * 100,
     y: Math.random() * 100,
-    size: 30 + Math.random() * 35,
+    size: 15 + Math.random() * 55,
     rotation: Math.random() * 360,
     opacity: 0.06 + Math.random() * 0.09,
     duration: 15 + Math.random() * 20,

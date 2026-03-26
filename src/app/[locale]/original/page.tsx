@@ -20,7 +20,8 @@ export default function OriginalPage() {
       <main>
         <ProductHero name={tProducts("name")} tagline={t("hero")}
           imageSrc="/images/products/original-desk.jpg" variant="original"
-          decorativeBg="/images/decorative/coffee-beans-pattern.png" />
+          decorativeBg="/images/decorative/coffee-beans-pattern.png"
+          showBeans={false} />
         <ProductSpecs variant="original" labelSrc="/images/labels/original-label.png"
           decorativeSrc="/images/decorative/coffee-beans-pattern.png" />
         <ProductCta productName={tProducts("name")} variant="original"

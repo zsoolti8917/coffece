@@ -10,17 +10,24 @@ interface ProductHeroProps {
   imageSrc: string;
   variant: "original" | "zlaty";
   decorativeBg?: string;
+  showBeans?: boolean;
 }
 
-export function ProductHero({ name, tagline, imageSrc, variant, decorativeBg }: ProductHeroProps) {
+export function ProductHero({ name, tagline, imageSrc, variant, decorativeBg, showBeans = false }: ProductHeroProps) {
   const isDark = variant === "original";
 
   return (
     <section className={`min-h-[70vh] flex items-center pt-24 relative overflow-hidden ${isDark ? "bg-brand-black" : "bg-brand-gold-light"}`}>
-      <FloatingBeans count={12} />
+      {showBeans && <FloatingBeans count={20} />}
       {decorativeBg && (
-        <div className="absolute inset-0 opacity-[0.06]">
-          <Image src={decorativeBg} alt="" fill className="object-cover" priority />
+        <div className={`absolute inset-0 ${isDark ? "opacity-[0.06]" : "opacity-[0.08] dark:opacity-[0.06]"}`}>
+          <Image
+            src={decorativeBg}
+            alt=""
+            fill
+            className={`object-cover ${!isDark ? "invert" : ""}`}
+            priority
+          />
         </div>
       )}
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -33,7 +40,7 @@ export function ProductHero({ name, tagline, imageSrc, variant, decorativeBg }: 
           </motion.div>
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.7 }} className="flex justify-center">
-            <Image src={imageSrc} alt={name} width={400} height={500} className="rounded-2xl shadow-2xl" priority />
+            <Image src={imageSrc} alt={name} width={500} height={600} className="rounded-2xl shadow-2xl max-h-[500px] w-auto" priority />
           </motion.div>
         </div>
       </div>
