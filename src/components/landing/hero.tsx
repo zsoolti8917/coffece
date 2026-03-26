@@ -21,7 +21,7 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
 
   return (
     <section className="relative min-h-screen flex items-center bg-brand-black overflow-hidden">
-      <FloatingBeans count={30} />
+      <FloatingBeans count={50} />
 
       <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -55,16 +55,16 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
           <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8, ease: "easeOut" }}
             className="relative flex justify-center items-center gap-6 lg:gap-8">
-            <motion.div animate={{ y: [0, -8, 0] }}
+            <motion.div animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }} className="relative -rotate-3">
               <Image src="/images/products/original-kitchen.png" alt="Coffece Original"
-                width={220} height={320} className="rounded-lg shadow-2xl" priority />
+                width={320} height={450} className="rounded-2xl shadow-2xl w-[260px] lg:w-[320px] h-auto" priority />
             </motion.div>
-            <motion.div animate={{ y: [0, -8, 0] }}
+            <motion.div animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              className="relative rotate-3 mt-8">
+              className="relative rotate-3 mt-12">
               <Image src="/images/products/zlaty-office.png" alt="Coffece Zlatý Štandard"
-                width={220} height={320} className="rounded-lg shadow-2xl" priority />
+                width={320} height={450} className="rounded-2xl shadow-2xl w-[260px] lg:w-[320px] h-auto" priority />
             </motion.div>
           </motion.div>
         </div>
