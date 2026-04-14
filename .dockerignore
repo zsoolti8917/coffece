@@ -1,0 +1,31 @@
+node_modules
+.next
+.git
+.gitignore
+.github
+.env*
+!.env.example
+
+Dockerfile
+.dockerignore
+README.md
+TASK.md
+CLAUDE.md
+AGENTS.md
+docs
+
+# Design/source assets not needed at runtime (runtime assets live in public/)
+Photos
+Beans
+logo
+design_elements
+labels
+web
+ai product photos
+
+.vscode
+.idea
+*.log
+.DS_Store
+tsconfig.tsbuildinfo
+coverage
