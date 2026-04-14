@@ -2,22 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
 import { Button } from "@/components/ui/button";
-import { Moon, Sun } from "lucide-react";
 import { LanguageToggle } from "./language-toggle";
 import { MobileNav } from "./mobile-nav";
 
-export function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
+export function Navbar({ onOrderClick, variant = "dark" }: { onOrderClick: () => void; variant?: "light" | "dark" }) {
   const t = useTranslations("nav");
-  const { theme, setTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
     const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -38,28 +33,20 @@ export function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
+      <div className="container mx-auto flex items-center justify-between h-16 lg:h-20 px-4 lg:px-8">
         <Link href="/" className="flex-shrink-0">
           <Image
             src={
-              scrolled
+              scrolled || variant === "light"
                 ? "/images/logos/coffece-logo-black.png"
                 : "/images/logos/coffece-logo-white.png"
             }
             alt="Coffece"
-            width={200}
-            height={60}
-            className={`h-10 lg:h-14 w-auto dark:hidden ${
-              scrolled ? "mix-blend-multiply" : "mix-blend-screen"
+            width={400}
+            height={118}
+            className={`h-24 lg:h-36 w-auto ${
+              scrolled || variant === "light" ? "mix-blend-multiply" : "mix-blend-screen"
             }`}
-            priority
-          />
-          <Image
-            src="/images/logos/coffece-logo-white.png"
-            alt="Coffece"
-            width={200}
-            height={60}
-            className="h-10 lg:h-14 w-auto hidden dark:block mix-blend-screen"
             priority
           />
         </Link>
@@ -70,7 +57,7 @@ export function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-brand-gold ${
-                scrolled ? "text-foreground" : "text-white"
+                scrolled || variant === "light" ? "text-foreground" : "text-white"
               }`}
             >
               {link.label}
@@ -79,22 +66,13 @@ export function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
         </nav>
 
         <div className="flex items-center gap-2">
-          <LanguageToggle />
-
-          {mounted && (
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className={scrolled ? "" : "text-white hover:text-brand-gold"}
-            >
-              {theme === "dark" ? (
-                <Sun className="h-4 w-4" />
-              ) : (
-                <Moon className="h-4 w-4" />
-              )}
-            </Button>
-          )}
+          <LanguageToggle
+            className={
+              scrolled || variant === "light"
+                ? "text-foreground hover:text-brand-gold"
+                : "text-white hover:text-brand-gold hover:bg-white/10"
+            }
+          />
 
           <Button
             onClick={onOrderClick}
@@ -103,7 +81,14 @@ export function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
             {t("order")}
           </Button>
 
-          <MobileNav onOrderClick={onOrderClick} />
+          <MobileNav
+            onOrderClick={onOrderClick}
+            triggerClassName={
+              scrolled || variant === "light"
+                ? "text-foreground"
+                : "text-white"
+            }
+          />
         </div>
       </div>
     </header>
