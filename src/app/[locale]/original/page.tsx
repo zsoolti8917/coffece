@@ -22,8 +22,7 @@ export default function OriginalPage() {
           imageSrc="/images/products/original-desk.jpg" variant="original"
           decorativeBg="/images/decorative/coffee-beans-pattern.png"
           showBeans={false} />
-        <ProductSpecs variant="original" labelSrc="/images/labels/original-label.png"
-          decorativeSrc="/images/decorative/coffee-beans-pattern.png" />
+        <ProductSpecs variant="original" labelSrc="/images/labels/original-label.png" />
         <ProductCta productName={tProducts("name")} variant="original"
           onOrderClick={() => setOrderOpen(true)} />
       </main>

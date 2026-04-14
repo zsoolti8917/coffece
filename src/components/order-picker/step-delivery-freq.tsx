@@ -1,13 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { CalendarDays, CalendarRange, Calendar, Clock } from "lucide-react";
 import { OptionCard } from "./option-card";
 
 const options = [
-  { value: "weekly", key: "weekly" },
-  { value: "biweekly", key: "biweekly" },
-  { value: "monthly", key: "monthly" },
-  { value: "onDemand", key: "onDemand" },
+  { value: "weekly", key: "weekly", icon: <CalendarDays className="h-6 w-6" /> },
+  { value: "biweekly", key: "biweekly", icon: <CalendarRange className="h-6 w-6" /> },
+  { value: "monthly", key: "monthly", icon: <Calendar className="h-6 w-6" /> },
+  { value: "onDemand", key: "onDemand", icon: <Clock className="h-6 w-6" /> },
 ] as const;
 
 interface Props {
@@ -23,7 +24,7 @@ export function StepDeliveryFreq({ value, onChange }: Props) {
       <p className="text-muted-foreground mb-6">{t("subtitle")}</p>
       <div className="grid grid-cols-2 gap-3">
         {options.map((opt) => (
-          <OptionCard key={opt.value} title={t(opt.key)} selected={value === opt.value}
+          <OptionCard key={opt.value} icon={opt.icon} title={t(opt.key)} selected={value === opt.value}
             onClick={() => onChange(opt.value, t(opt.key))} />
         ))}
       </div>

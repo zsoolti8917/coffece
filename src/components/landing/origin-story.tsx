@@ -10,7 +10,7 @@ export function OriginStory() {
   return (
     <section className="py-24 bg-brand-black text-white relative overflow-hidden">
       <div className="absolute inset-0 opacity-[0.03]">
-        <Image src="/images/decorative/coffee-beans-pattern.png" alt="" fill className="object-cover" />
+        <Image src="/images/decorative/coffee-beans-pattern.png" alt="" fill sizes="100vw" className="object-cover" />
       </div>
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -27,7 +27,7 @@ export function OriginStory() {
           <motion.div initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="flex justify-center">
             <div className="relative w-72 h-72 lg:w-96 lg:h-96">
-              <Image src="/images/decorative/coffee-plant.png" alt="Coffee plant illustration" fill className="object-contain" />
+              <Image src="/images/decorative/coffee-plant.png" alt="Coffee plant illustration" fill sizes="(max-width: 1024px) 288px, 384px" className="object-contain" />
             </div>
           </motion.div>
         </div>

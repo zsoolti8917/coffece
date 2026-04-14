@@ -20,11 +20,11 @@ export function Hero({ onOrderClick }: { onOrderClick: () => void }) {
   const t = useTranslations("hero");
 
   return (
-    <section className="relative min-h-screen flex items-center bg-brand-black overflow-hidden">
-      <FloatingBeans count={250} />
+    <section className="relative min-h-screen flex flex-col bg-brand-black overflow-hidden">
+      <FloatingBeans count={{ base: 50, md: 130, lg: 250 }} />
 
-      <div className="container mx-auto px-4 lg:px-8 pt-24 pb-16 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 flex items-center flex-1">
+        <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
           <div>
             <motion.p custom={0} variants={fadeUp} initial="hidden" animate="visible"
               className="text-overline uppercase text-brand-gold mb-4 tracking-[0.15em] text-xs font-semibold">

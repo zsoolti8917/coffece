@@ -57,6 +57,36 @@
     "text": "Naša káva pochádza z farmy Agron Cereale Minerio v Brazílii. Každé zrnko je starostlivo vybraté a pražené v malých dávkach pre zachovanie unikátnej chuti a arómy.",
     "badge": "BRAZIL"
   },
+  "values": {
+    "caption": "Naše kľúčové hodnoty",
+    "title": "Bezproblémové kávové riešenia pre pracoviská už viac ako 13 rokov",
+    "items": [
+      {
+        "title": "0-24 zákaznícka podpora",
+        "description": "Naša zákaznícka linka je dostupná 24 hodín denne — kedykoľvek nám môžete zavolať s otázkami alebo pripomienkami."
+      },
+      {
+        "title": "Okamžitý servis",
+        "description": "V prípade poruchy vám náhradný stroj pošleme už nasledujúci pracovný deň, aby ste nezostali bez kávy."
+      },
+      {
+        "title": "Doručenie na druhý deň",
+        "description": "Naša kávová kuriérska služba doručí vašu objednávku nasledujúci pracovný deň — zásobovanie bez prerušenia."
+      },
+      {
+        "title": "7-dňová skúšobná doba",
+        "description": "Vyskúšajte naše služby celý týždeň nezáväzne, skôr než sa rozhodnete."
+      },
+      {
+        "title": "Prehľadný partnerský portál",
+        "description": "Na našom online portáli vybavíte všetko od doobjednania kávy po nahlásenie poruchy — jednoducho a na jednom mieste."
+      },
+      {
+        "title": "Predvídateľné náklady",
+        "description": "Žiadne nájomné, žiadne servisné ani prepravné poplatky — platíte presne toľko, koľko si objednáte."
+      }
+    ]
+  },
   "cta": {
     "title": "Pripravení na lepšiu kávu?",
     "subtitle": "Objednajte si čerstvo praženú kávu priamo do vašej kancelárie.",
@@ -159,6 +189,20 @@
       "phone": "+421 xxx xxx xxx",
       "addressLabel": "Adresa",
       "address": "Ulica 123, 010 01 Mesto, Slovensko"
+    },
+    "orderCta": "Vytvorte si nezáväznú ponuku na mieru",
+    "orderCtaOverline": "OBJEDNÁVKA",
+    "orderCtaSubtitle": "Nezáväzná ponuka pre vašu kanceláriu",
+    "orderCtaButton": "Objednať interaktívne",
+    "badge1": "Bez záväzkov",
+    "badge2": "Do 24h",
+    "badge3": "100% Arabica",
+    "formHeading": "Napíšte nám",
+    "responseTime": "Ozveme sa vám do 24 hodín",
+    "variants": {
+      "a": {
+        "contactTitle": "Kontaktné údaje"
+      }
     }
   },
   "faq": {

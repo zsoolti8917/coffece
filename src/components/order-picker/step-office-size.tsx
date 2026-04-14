@@ -1,13 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Building2, Building, Landmark, Settings } from "lucide-react";
 import { OptionCard } from "./option-card";
 
 const options = [
-  { value: "small", icon: "\u{1F3E2}", key: "small" },
-  { value: "medium", icon: "\u{1F3EC}", key: "medium" },
-  { value: "large", icon: "\u{1F3E3}", key: "large" },
-  { value: "other", icon: "\u2699", key: "other" },
+  { value: "small", icon: <Building2 className="h-6 w-6" />, key: "small" },
+  { value: "medium", icon: <Building className="h-6 w-6" />, key: "medium" },
+  { value: "large", icon: <Landmark className="h-6 w-6" />, key: "large" },
+  { value: "other", icon: <Settings className="h-6 w-6" />, key: "other" },
 ] as const;
 
 interface Props {

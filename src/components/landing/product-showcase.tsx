@@ -28,6 +28,7 @@ export function ProductShowcase() {
                     src="/images/labels/original-label.png"
                     alt={t("original.name")}
                     fill
+                    sizes="(max-width: 768px) 100vw, 448px"
                     className="object-contain p-6 drop-shadow-2xl"
                   />
                 </div>
@@ -44,6 +45,7 @@ export function ProductShowcase() {
                     src="/images/labels/zlaty-label.png"
                     alt={t("zlaty.name")}
                     fill
+                    sizes="(max-width: 768px) 100vw, 448px"
                     className="object-contain p-6 drop-shadow-2xl"
                   />
                 </div>

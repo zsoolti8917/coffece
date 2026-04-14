@@ -7,11 +7,12 @@ import { cn } from "@/lib/utils";
 interface StepProgressProps {
   currentStep: number;
   answers: Record<number, string>;
+  onStepClick?: (step: number) => void;
 }
 
 const stepKeys = ["step1", "step2", "step3", "step4", "step5"] as const;
 
-export function StepProgress({ currentStep, answers }: StepProgressProps) {
+export function StepProgress({ currentStep, answers, onStepClick }: StepProgressProps) {
   const t = useTranslations("order.progress");
 
   return (
@@ -21,10 +22,20 @@ export function StepProgress({ currentStep, answers }: StepProgressProps) {
         const isCompleted = stepNum < currentStep;
         const isCurrent = stepNum === currentStep;
         const isUpcoming = stepNum > currentStep;
+        const isClickable = (isCompleted || isCurrent) && onStepClick;
 
         return (
           <div key={key}>
-            <div className="flex items-center gap-3">
+            <button
+              type="button"
+              disabled={!isClickable}
+              onClick={() => isClickable && onStepClick(stepNum)}
+              className={cn(
+                "flex items-center gap-3 w-full text-left py-1 rounded-lg transition-colors",
+                isClickable && "cursor-pointer hover:bg-white/5",
+                isUpcoming && "cursor-default"
+              )}
+            >
               <div className={cn(
                 "w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold shrink-0 transition-colors",
                 isCompleted && "bg-green-600 text-white",
@@ -43,7 +54,7 @@ export function StepProgress({ currentStep, answers }: StepProgressProps) {
                   {isCompleted && answers[stepNum] ? answers[stepNum] : t(key)}
                 </span>
               </div>
-            </div>
+            </button>
             {i < stepKeys.length - 1 && (
               <div className={cn("w-0.5 h-5 ml-[15px] transition-colors",
                 stepNum < currentStep ? "bg-green-600" : "bg-gray-800")} />

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 interface OptionCardProps {
-  icon?: string;
+  icon?: React.ReactNode;
   title: string;
   description?: string;
   selected: boolean;
@@ -29,7 +29,7 @@ export function OptionCard({ icon, title, description, selected, onClick, classN
     >
       {children ? children : (
         <>
-          {icon && <span className="text-2xl mb-2 block">{icon}</span>}
+          {icon && <div className="mb-2 text-brand-gold">{icon}</div>}
           <span className="font-semibold block">{title}</span>
           {description && <span className="text-sm text-muted-foreground mt-1 block">{description}</span>}
         </>

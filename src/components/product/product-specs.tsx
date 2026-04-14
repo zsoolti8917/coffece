@@ -7,10 +7,9 @@ import { motion } from "framer-motion";
 interface ProductSpecsProps {
   variant: "original" | "zlaty";
   labelSrc: string;
-  decorativeSrc: string;
 }
 
-export function ProductSpecs({ variant, labelSrc, decorativeSrc }: ProductSpecsProps) {
+export function ProductSpecs({ variant, labelSrc }: ProductSpecsProps) {
   const t = useTranslations("product");
   const tProduct = useTranslations(`product.${variant}`);
 
@@ -52,12 +51,9 @@ export function ProductSpecs({ variant, labelSrc, decorativeSrc }: ProductSpecsP
             </div>
           </motion.div>
           <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }} className="relative">
+            viewport={{ once: true }} transition={{ duration: 0.6, delay: 0.2 }}>
             <div className="relative aspect-square max-w-md mx-auto">
-              <Image src={labelSrc} alt="Product label" fill className="object-contain rounded-xl" />
-            </div>
-            <div className="absolute -bottom-8 -right-8 w-48 h-48 opacity-10">
-              <Image src={decorativeSrc} alt="" fill className="object-contain" />
+              <Image src={labelSrc} alt="Product label" fill sizes="(max-width: 1024px) 100vw, 448px" className="object-contain rounded-xl" />
             </div>
           </motion.div>
         </div>

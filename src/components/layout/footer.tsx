@@ -12,13 +12,13 @@ export function Footer() {
     <footer className="bg-brand-black text-white">
       <div className="container mx-auto px-4 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div>
+          <div className="-mt-8">
             <Image
               src="/images/logos/coffece-logo-white.png"
               alt="Coffece"
-              width={200}
-              height={60}
-              className="h-12 w-auto mb-4 mix-blend-screen"
+              width={400}
+              height={118}
+              className="h-24 lg:h-36 w-auto mb-4"
             />
             <p className="text-sm text-gray-400">{t("tagline")}</p>
           </div>

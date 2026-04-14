@@ -57,6 +57,36 @@
     "text": "Our coffee comes from the Agron Cereale Minerio farm in Brazil. Every bean is carefully selected and roasted in small batches to preserve its unique flavor and aroma.",
     "badge": "BRAZIL"
   },
+  "values": {
+    "caption": "Our key values",
+    "title": "Seamless workplace coffee solutions for over 13 years",
+    "items": [
+      {
+        "title": "24/7 Customer Support",
+        "description": "Our customer line is available 24 hours a day — call us anytime with questions or feedback."
+      },
+      {
+        "title": "Instant Service",
+        "description": "In case of a malfunction, we send a replacement machine the next business day so you're never without coffee."
+      },
+      {
+        "title": "Next-day Delivery",
+        "description": "Our coffee courier service delivers your order the next business day — uninterrupted supply guaranteed."
+      },
+      {
+        "title": "7-day Trial Period",
+        "description": "Test our services for a full week with no obligation before you decide."
+      },
+      {
+        "title": "Transparent Partner Portal",
+        "description": "On our online portal, handle everything from reordering coffee to reporting issues — simply and in one place."
+      },
+      {
+        "title": "Predictable Costs",
+        "description": "No rental fees, no service or delivery charges — you pay exactly what you order."
+      }
+    ]
+  },
   "cta": {
     "title": "Ready for better coffee?",
     "subtitle": "Order freshly roasted coffee delivered right to your office.",
@@ -159,6 +189,20 @@
       "phone": "+421 xxx xxx xxx",
       "addressLabel": "Address",
       "address": "Street 123, 010 01 City, Slovakia"
+    },
+    "orderCta": "Build your custom non-binding offer",
+    "orderCtaOverline": "ORDER",
+    "orderCtaSubtitle": "Non-binding offer for your office",
+    "orderCtaButton": "Order interactively",
+    "badge1": "No commitments",
+    "badge2": "Within 24h",
+    "badge3": "100% Arabica",
+    "formHeading": "Write to us",
+    "responseTime": "We'll get back to you within 24 hours",
+    "variants": {
+      "a": {
+        "contactTitle": "Contact Details"
+      }
     }
   },
   "faq": {
