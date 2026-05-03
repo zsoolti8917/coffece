@@ -4,8 +4,9 @@ import { useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, ArrowLeft } from "lucide-react";
+import { X, ArrowLeft, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BrandButton } from "@/components/ui/brand-button";
 import { StepProgress } from "./step-progress";
 import { StepOfficeSize } from "./step-office-size";
 import { StepDailyDrinkers } from "./step-daily-drinkers";
@@ -127,9 +128,9 @@ export function OrderModal({ open, onClose, preselectedCoffee }: OrderModalProps
           <div className="text-5xl mb-6">&#9749;</div>
           <h2 className="text-2xl font-extrabold mb-3">{t("step5.successTitle")}</h2>
           <p className="text-muted-foreground mb-8">{t("step5.successText")}</p>
-          <Button onClick={onClose} className="bg-brand-gold text-brand-black hover:bg-brand-gold/90 font-bold">
+          <BrandButton onClick={onClose} size="md" icon="none">
             {t("close")}
-          </Button>
+          </BrandButton>
         </div>
       );
     }
@@ -193,19 +194,37 @@ export function OrderModal({ open, onClose, preselectedCoffee }: OrderModalProps
             </AnimatePresence>
           </div>
           {!submitted && (
-            <div className="flex items-center justify-between pt-6 border-t mt-6">
-              {step > 1 ? (
-                <Button variant="outline" onClick={back} className="gap-2">
-                  <ArrowLeft className="h-4 w-4" /> {t("back")}
-                </Button>
-              ) : <div />}
-              {step === TOTAL_STEPS ? (
-                <Button onClick={handleSubmit} disabled={!canProceed() || submitting}
-                  className="bg-brand-gold text-brand-black hover:bg-brand-gold/90 font-bold gap-2">
-                  {submitting ? "..." : t("submit")}
-                </Button>
-              ) : <div />}
-            </div>
+            <>
+              <a
+                href={`tel:${tContact("phone").replace(/[^\d+]/g, "")}`}
+                className="group mt-6 flex items-center gap-4 rounded-xl border-2 border-brand-gold/40 bg-brand-black px-5 py-4 lg:px-6 lg:py-5 transition hover:border-brand-gold hover:bg-brand-black/95"
+              >
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold transition group-hover:bg-brand-gold/25">
+                  <Phone className="h-6 w-6" />
+                </span>
+                <div className="flex-1 min-w-0">
+                  <p className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-semibold mb-0.5">
+                    {t("callBand.title")}
+                  </p>
+                  <p className="text-xs text-white/60 hidden sm:block">{t("callBand.subtitle")}</p>
+                </div>
+                <p className="text-xl lg:text-2xl font-extrabold text-white tracking-tight whitespace-nowrap">
+                  {tContact("phone")}
+                </p>
+              </a>
+              <div className="flex items-center justify-between pt-6 border-t mt-6">
+                {step > 1 ? (
+                  <Button variant="outline" onClick={back} className="gap-2">
+                    <ArrowLeft className="h-4 w-4" /> {t("back")}
+                  </Button>
+                ) : <div />}
+                {step === TOTAL_STEPS ? (
+                  <BrandButton size="md" onClick={handleSubmit} disabled={!canProceed() || submitting}>
+                    {submitting ? "..." : t("submit")}
+                  </BrandButton>
+                ) : <div />}
+              </div>
+            </>
           )}
           {error && <p className="text-destructive text-sm mt-3 text-center">{t("step5.errorText")}</p>}
         </div>

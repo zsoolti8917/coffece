@@ -9,10 +9,10 @@
     "language": "EN"
   },
   "hero": {
-    "overline": "Čerstvá káva pre váš office",
-    "title": "Premeňte svoj office na",
-    "titleHighlight": "kaviareň",
-    "subtitle": "Čerstvo pražená káva z Brazílie. Doručujeme priamo do vašej kancelárie. Žiadne záväzky, žiadne starosti.",
+    "overline": "",
+    "title": "Čerstvá káva pre váš",
+    "titleHighlight": "office",
+    "subtitle": "Čerstvo pražená káva z Brazílie. Doručujeme priamo do vašej kancelárie.",
     "cta": "Objednať",
     "learnMore": "Zistiť viac"
   },
@@ -28,15 +28,18 @@
   },
   "products": {
     "overline": "Naša ponuka",
-    "title": "Naša ponuka kávy",
+    "title": "Dve kávy. Jeden štandard.",
+    "subtitle": "Dva odlišné profily zo srdca Brazílie — vyberte si tú, ktorá sadne vašej kancelárii.",
     "learnMore": "Zistiť viac",
     "original": {
       "name": "Original",
+      "tagline": "Plný a klasický",
       "type": "100% Arabica",
       "region": "Brazília"
     },
     "zlaty": {
       "name": "Zlatý Štandard",
+      "tagline": "Jemný a komplexný",
       "type": "100% výberová Arabica",
       "region": "Brazília"
     }
@@ -44,52 +47,81 @@
   "howItWorks": {
     "overline": "Jednoduchý proces",
     "title": "Ako to funguje?",
-    "step1": "Vyplňte formulár",
-    "step1Desc": "Povedzte nám o vašej kancelárii a preferenciách.",
-    "step2": "Pripravíme ponuku",
-    "step2Desc": "Na mieru pre vašu kanceláriu a tím.",
-    "step3": "Doručíme kávu",
-    "step3Desc": "Čerstvo pražená káva priamo k vám do office."
+    "steps": [
+      {
+        "title": "Vyberte si kávu",
+        "description": "Vyberte si vami preferovanú kávu „originál\" alebo „zlatý štandard\"."
+      },
+      {
+        "title": "Nastavte si objem",
+        "description": "Prispôsobíme sa potrebám malej firmy aj veľkého administratívneho oddelenia."
+      },
+      {
+        "title": "Mesačný dovoz",
+        "description": "Čerstvé zrná vám doručíme priamo do kancelárie podľa dohodnutého plánu."
+      },
+      {
+        "title": "Jednoduchá platba",
+        "description": "Raz mesačne uhradíte jednu profesionálnu faktúru."
+      }
+    ]
   },
   "origin": {
     "overline": "Náš príbeh",
     "title": "Srdce našej kávy",
-    "text": "Naša káva pochádza z farmy Agron Cereale Minerio v Brazílii. Každé zrnko je starostlivo vybraté a pražené v malých dávkach pre zachovanie unikátnej chuti a arómy.",
-    "badge": "BRAZIL"
+    "text": "Naša káva pochádza z farmy Agron Cereale Minerio v Brazílii. Každé zrnko je starostlivo vybraté a pražené v malých dávkach pre zachovanie unikátnej chuti a arómy."
   },
-  "values": {
-    "caption": "Naše kľúčové hodnoty",
-    "title": "Bezproblémové kávové riešenia pre pracoviská už viac ako 13 rokov",
+  "testimonials": {
+    "overline": "Hovoria o nás",
+    "title": "Káva, ktorá robí ráno krajším",
     "items": [
       {
-        "title": "0-24 zákaznícka podpora",
-        "description": "Naša zákaznícka linka je dostupná 24 hodín denne — kedykoľvek nám môžete zavolať s otázkami alebo pripomienkami."
+        "quote": "Konečne sme prestali riešiť kávu. Príde sama, kvalita je stabilná a kolegovia majú každé ráno čerstvé zrno.",
+        "name": "Mária K.",
+        "role": "Office manager, IT spoločnosť"
       },
       {
-        "title": "Okamžitý servis",
-        "description": "V prípade poruchy vám náhradný stroj pošleme už nasledujúci pracovný deň, aby ste nezostali bez kávy."
+        "quote": "Odkedy máme Coffece, ráno v kancelárii ide oveľa ľahšie. Tím to ocenil hneď v prvý týždeň.",
+        "name": "Tomáš H.",
+        "role": "CEO, startup"
       },
       {
-        "title": "Doručenie na druhý deň",
-        "description": "Naša kávová kuriérska služba doručí vašu objednávku nasledujúci pracovný deň — zásobovanie bez prerušenia."
+        "quote": "Kvalita ako z malej pražiarne, servis ako od starého známeho. Klienti to komentujú už pri vstupe.",
+        "name": "Lucia B.",
+        "role": "HR, kreatívna agentúra"
       },
       {
-        "title": "7-dňová skúšobná doba",
-        "description": "Vyskúšajte naše služby celý týždeň nezáväzne, skôr než sa rozhodnete."
+        "quote": "Bohatá chuť, nulové starosti. Mesačná faktúra a máme pokoj.",
+        "name": "Peter D.",
+        "role": "Architektonický ateliér"
       },
       {
-        "title": "Prehľadný partnerský portál",
-        "description": "Na našom online portáli vybavíte všetko od doobjednania kávy po nahlásenie poruchy — jednoducho a na jednom mieste."
+        "quote": "Pravidelnosť, skvelá káva, žiadne stresy. Najlepšie rozhodnutie pre kanceláriu za posledné roky.",
+        "name": "Andrea M.",
+        "role": "Lead, finančná spoločnosť"
       },
       {
-        "title": "Predvídateľné náklady",
-        "description": "Žiadne nájomné, žiadne servisné ani prepravné poplatky — platíte presne toľko, koľko si objednáte."
+        "quote": "Káva má charakter — kancelária ňou vonia ešte pred prvou poradou.",
+        "name": "Roman V.",
+        "role": "Brand designer, štúdio"
+      },
+      {
+        "quote": "Klienti sa pýtajú, kde to kupujeme. Príjemný problém.",
+        "name": "Jana S.",
+        "role": "Manager, coworking"
+      },
+      {
+        "quote": "Doručenie načas, balenie precízne, chuť konzistentná. Presne to, čo kancelária potrebuje.",
+        "name": "Erik P.",
+        "role": "Operations, logistická firma"
       }
     ]
   },
   "cta": {
+    "eyebrow": "Posledný krok",
     "title": "Pripravení na lepšiu kávu?",
     "subtitle": "Objednajte si čerstvo praženú kávu priamo do vašej kancelárie.",
+    "tagline": "Bez zmluvy. Bez záväzkov.",
     "button": "Objednať teraz"
   },
   "product": {
@@ -99,6 +131,12 @@
     "roastDate": "Dátum praženia",
     "type": "Typ",
     "orderThis": "Objednať",
+    "detailsOverline": "Detaily",
+    "specsTitle": "Profil kávy",
+    "tastingNotes": "Chuťové tóny",
+    "viewProfile": "Profil",
+    "ctaSubtitle": "Mesačné dodávky priamo do vašej kancelárie. Bez záväzkov, bez stresu.",
+    "ctaOverline": "Pripravení?",
     "original": {
       "hero": "Silná, vyvážená chuť pre každodenné potešenie v kancelárii.",
       "description": "Coffece Original je naša vlajková zmes 100% Arabica zŕn z Brazílie. S intenzitou 4/5 ponúka bohatú, plnú chuť s jemnými čokoládovými tónmi a orechovou dochutou. Ideálna pre tých, čo ocenia klasickú kávu bez kompromisov.",
@@ -117,6 +155,10 @@
     "back": "Späť",
     "submit": "Odoslať",
     "callInstead": "Radšej zavoláte?",
+    "callBand": {
+      "title": "Radšej zavolajte",
+      "subtitle": "Pomôžeme s objednávkou priamo cez telefón."
+    },
     "step1": {
       "title": "Aká veľká je vaša kancelária?",
       "subtitle": "Vyberte možnosť, ktorá najlepšie popisuje váš priestor.",
@@ -141,11 +183,9 @@
     },
     "step4": {
       "title": "Ako často chcete dodávať kávu?",
-      "subtitle": "Frekvenciu môžete kedykoľvek zmeniť.",
-      "weekly": "Týždenne",
-      "biweekly": "Dvojtýždenne",
+      "subtitle": "Doručujeme raz mesačne alebo podľa dohody.",
       "monthly": "Mesačne",
-      "onDemand": "Podľa potreby"
+      "agreement": "Dohoda"
     },
     "step5": {
       "title": "Posledný krok — kontaktné údaje",
@@ -172,6 +212,16 @@
   "contact": {
     "title": "Kontakt",
     "subtitle": "Máte otázky? Napíšte nám alebo zavolajte.",
+    "eyebrow": "Kontakt",
+    "socialLabel": "Sledujte nás",
+    "nextSteps": {
+      "title": "Čo bude ďalej?",
+      "items": [
+        "Odpovieme do 24 hodín",
+        "Pripravíme ponuku na mieru",
+        "Doručíme prvú dodávku"
+      ]
+    },
     "form": {
       "name": "Meno a priezvisko",
       "email": "Email",
@@ -180,7 +230,10 @@
       "message": "Správa",
       "submit": "Odoslať správu",
       "success": "Správa bola odoslaná. Ďakujeme!",
-      "error": "Niečo sa nepodarilo. Skúste to znova."
+      "error": "Niečo sa nepodarilo. Skúste to znova.",
+      "gdpr": "Súhlasím so spracovaním osobných údajov podľa",
+      "gdprLink": "zásad ochrany osobných údajov",
+      "gdprRequired": "Pre odoslanie formulára je nutný súhlas."
     },
     "info": {
       "emailLabel": "Email",
@@ -208,6 +261,14 @@
   "faq": {
     "title": "Často kladené otázky",
     "subtitle": "Nenašli ste odpoveď? Kontaktujte nás.",
+    "eyebrow": "FAQ",
+    "allLabel": "Všetko",
+    "needHelp": "Potrebujete pomoc?",
+    "bottomBand": {
+      "eyebrow": "Stále máte otázku?",
+      "title": "Zavolajte alebo si nechajte spraviť ponuku.",
+      "subtitle": "Odpovieme rýchlo. Pomôžeme s objednávkou aj cez telefón."
+    },
     "categories": {
       "ordering": "Objednávky",
       "delivery": "Dodanie",
@@ -215,15 +276,14 @@
       "general": "Všeobecné"
     },
     "items": [
-      { "q": "Aké je minimálne množstvo objednávky?", "a": "Minimálna objednávka je 1 kg kávy (4 balenia po 250g). Pre väčšie kancelárie odporúčame pravidelné dodávky.", "cat": "ordering" },
+      { "q": "Aké je minimálne množstvo objednávky?", "a": "Minimálna objednávka je 1 kg kávy. Pre väčšie kancelárie odporúčame pravidelné dodávky.", "cat": "ordering" },
       { "q": "Ako si objednám kávu?", "a": "Jednoducho vyplňte náš online formulár alebo nás kontaktujte telefonicky. Pripravíme vám ponuku na mieru.", "cat": "ordering" },
       { "q": "Aké sú platobné podmienky?", "a": "Prijímame platbu bankovým prevodom a faktúrou. Pre pravidelných zákazníkov ponúkame mesačnú fakturáciu.", "cat": "ordering" },
       { "q": "Kam doručujete?", "a": "Doručujeme po celom Slovensku. Pre Bratislavu a okolie zabezpečujeme vlastnú dopravu.", "cat": "delivery" },
-      { "q": "Ako často môžem dostávať kávu?", "a": "Ponúkame týždenné, dvojtýždenné alebo mesačné dodávky. Frekvenciu môžete kedykoľvek zmeniť.", "cat": "delivery" },
+      { "q": "Ako často môžem dostávať kávu?", "a": "Ponúkame mesačné dodávky alebo dodanie podľa dohody. Frekvenciu môžete kedykoľvek zmeniť.", "cat": "delivery" },
       { "q": "Aký je rozdiel medzi Original a Zlatý Štandard?", "a": "Original je naša klasická zmes 100% Arabica s plnou chuťou. Zlatý Štandard je prémiová výberová Arabica s jemnejšou, komplexnejšou chuťou.", "cat": "products" },
-      { "q": "Ako dlho vydrží čerstvosť kávy?", "a": "Odporúčame spotrebovať do 4 týždňov od praženia pre najlepšiu chuť. Dátum praženia je uvedený na každom balení.", "cat": "products" },
+      { "q": "Ako dlho vydrží čerstvosť kávy?", "a": "Káva si zachová čerstvosť 6 týždňov od praženia — práve v tomto okne má najlepšiu chuť. Dátum praženia je uvedený na každom balení.", "cat": "products" },
       { "q": "Ako skladovať kávu?", "a": "Uchovávajte v suchu, na tmavom mieste, v uzavretom obale. Neodporúčame ukladať do chladničky.", "cat": "products" },
-      { "q": "Ponúkate skúšobnú objednávku?", "a": "Áno! Prvá objednávka je bez záväzkov. Vyskúšajte našu kávu a rozhodnite sa sami.", "cat": "general" },
       { "q": "Môžem objednávku kedykoľvek zrušiť?", "a": "Samozrejme. Nemáme žiadne dlhodobé zmluvy. Objednávku môžete zrušiť alebo pozastaviť kedykoľvek.", "cat": "general" }
     ]
   },
@@ -243,11 +303,9 @@
     "learnMore": "Zistiť viac"
   },
   "privacy": {
-    "title": "Ochrana osobných údajov",
-    "content": "Toto je zástupný text zásad ochrany osobných údajov. Bude nahradený skutočným obsahom."
+    "title": "Ochrana osobných údajov"
   },
   "cookiesPage": {
-    "title": "Cookies",
-    "content": "Toto je zástupný text zásad používania cookies. Bude nahradený skutočným obsahom."
+    "title": "Zásady používania cookies"
   }
 }

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { Link } from "@/i18n/routing";
-import { Button } from "@/components/ui/button";
+import { BrandButton } from "@/components/ui/brand-button";
 import { LanguageToggle } from "./language-toggle";
 import { MobileNav } from "./mobile-nav";
 
@@ -44,23 +44,27 @@ export function Navbar({ onOrderClick, variant = "dark" }: { onOrderClick: () =>
             alt="Coffece"
             width={400}
             height={118}
-            className={`h-24 lg:h-36 w-auto ${
-              scrolled || variant === "light" ? "mix-blend-multiply" : "mix-blend-screen"
-            }`}
+            className={`w-auto transition-[height] duration-300 ease-out ${
+              scrolled ? "h-24 lg:h-36" : "h-36 lg:h-52"
+            } ${scrolled || variant === "light" ? "mix-blend-multiply" : "mix-blend-screen"}`}
             priority
           />
         </Link>
 
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-7">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-brand-gold ${
+              className={`group/navlink relative py-1 text-sm font-medium transition-colors duration-200 hover:text-brand-gold ${
                 scrolled || variant === "light" ? "text-foreground" : "text-white"
               }`}
             >
               {link.label}
+              <span
+                aria-hidden
+                className="pointer-events-none absolute -bottom-0.5 left-1/2 h-[2px] w-0 -translate-x-1/2 rounded-full bg-brand-gold transition-[width] duration-300 ease-out group-hover/navlink:w-full"
+              />
             </Link>
           ))}
         </nav>
@@ -74,12 +78,9 @@ export function Navbar({ onOrderClick, variant = "dark" }: { onOrderClick: () =>
             }
           />
 
-          <Button
-            onClick={onOrderClick}
-            className="hidden md:inline-flex bg-brand-gold text-brand-black hover:bg-brand-gold/90 font-bold"
-          >
+          <BrandButton onClick={onOrderClick} size="sm" className="hidden md:inline-flex">
             {t("order")}
-          </Button>
+          </BrandButton>
 
           <MobileNav
             onOrderClick={onOrderClick}

@@ -4,10 +4,12 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { Providers } from "@/components/providers";
 import { CookieBanner } from "@/components/layout/cookie-banner";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
+  style: ["normal", "italic"],
   variable: "--font-sans",
 });
 
@@ -38,6 +40,7 @@ export default async function LocaleLayout({
           <Providers>
             {children}
             <CookieBanner />
+            <GoogleAnalytics />
           </Providers>
         </NextIntlClientProvider>
       </body>

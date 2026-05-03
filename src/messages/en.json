@@ -9,10 +9,10 @@
     "language": "SK"
   },
   "hero": {
-    "overline": "Fresh coffee for your office",
-    "title": "Turn your office into a",
-    "titleHighlight": "café",
-    "subtitle": "Freshly roasted coffee from Brazil. Delivered right to your office. No commitments, no worries.",
+    "overline": "",
+    "title": "Fresh coffee for your",
+    "titleHighlight": "office",
+    "subtitle": "Freshly roasted coffee from Brazil. Delivered right to your office.",
     "cta": "Order",
     "learnMore": "Learn more"
   },
@@ -28,15 +28,18 @@
   },
   "products": {
     "overline": "Our selection",
-    "title": "Our Coffee Selection",
+    "title": "Two coffees. One standard.",
+    "subtitle": "Two distinct profiles from the heart of Brazil — pick the one that fits your office.",
     "learnMore": "Learn more",
     "original": {
       "name": "Original",
+      "tagline": "Full-bodied & classic",
       "type": "100% Arabica",
       "region": "Brazil"
     },
     "zlaty": {
       "name": "Gold Standard",
+      "tagline": "Delicate & complex",
       "type": "100% Select Arabica",
       "region": "Brazil"
     }
@@ -44,52 +47,81 @@
   "howItWorks": {
     "overline": "Simple process",
     "title": "How does it work?",
-    "step1": "Fill out the form",
-    "step1Desc": "Tell us about your office and preferences.",
-    "step2": "We prepare your offer",
-    "step2Desc": "Customized for your office and team.",
-    "step3": "We deliver coffee",
-    "step3Desc": "Freshly roasted coffee delivered to your office."
+    "steps": [
+      {
+        "title": "Choose your coffee",
+        "description": "Pick your preferred blend — \"Original\" or \"Gold Standard\"."
+      },
+      {
+        "title": "Set your volume",
+        "description": "We adapt to the needs of a small studio or a large corporate floor."
+      },
+      {
+        "title": "Monthly delivery",
+        "description": "Fresh beans delivered straight to your office on the schedule we agreed on."
+      },
+      {
+        "title": "Simple payment",
+        "description": "One professional invoice, paid once a month."
+      }
+    ]
   },
   "origin": {
     "overline": "Our story",
     "title": "The Heart of Our Coffee",
-    "text": "Our coffee comes from the Agron Cereale Minerio farm in Brazil. Every bean is carefully selected and roasted in small batches to preserve its unique flavor and aroma.",
-    "badge": "BRAZIL"
+    "text": "Our coffee comes from the Agron Cereale Minerio farm in Brazil. Every bean is carefully selected and roasted in small batches to preserve its unique flavor and aroma."
   },
-  "values": {
-    "caption": "Our key values",
-    "title": "Seamless workplace coffee solutions for over 13 years",
+  "testimonials": {
+    "overline": "What they say about us",
+    "title": "Coffee that makes mornings better",
     "items": [
       {
-        "title": "24/7 Customer Support",
-        "description": "Our customer line is available 24 hours a day — call us anytime with questions or feedback."
+        "quote": "We finally stopped worrying about coffee. They deliver, they grind — we just drink.",
+        "name": "Mária K.",
+        "role": "Office manager, IT company"
       },
       {
-        "title": "Instant Service",
-        "description": "In case of a malfunction, we send a replacement machine the next business day so you're never without coffee."
+        "quote": "The team showed up smiling once we switched to Coffece. Best investment that paid back in a week.",
+        "name": "Tomáš H.",
+        "role": "CEO, startup"
       },
       {
-        "title": "Next-day Delivery",
-        "description": "Our coffee courier service delivers your order the next business day — uninterrupted supply guaranteed."
+        "quote": "Quality like a tiny roastery, service like an old friend. Clients mention it the moment they walk in.",
+        "name": "Lucia B.",
+        "role": "HR, creative agency"
       },
       {
-        "title": "7-day Trial Period",
-        "description": "Test our services for a full week with no obligation before you decide."
+        "quote": "Professional taste, zero hassle. One monthly invoice and done.",
+        "name": "Peter D.",
+        "role": "Architecture studio"
       },
       {
-        "title": "Transparent Partner Portal",
-        "description": "On our online portal, handle everything from reordering coffee to reporting issues — simply and in one place."
+        "quote": "Reliable, clean coffee, zero stress. Our best office decision in years.",
+        "name": "Andrea M.",
+        "role": "Lead, finance company"
       },
       {
-        "title": "Predictable Costs",
-        "description": "No rental fees, no service or delivery charges — you pay exactly what you order."
+        "quote": "The coffee has character — you could smell it before the first meeting started.",
+        "name": "Roman V.",
+        "role": "Brand designer, studio"
+      },
+      {
+        "quote": "Clients ask where we buy it. A nice problem to have.",
+        "name": "Jana S.",
+        "role": "Manager, coworking"
+      },
+      {
+        "quote": "Always on time, packaging clean, taste consistent. Exactly what an office needs.",
+        "name": "Erik P.",
+        "role": "Operations, logistics company"
       }
     ]
   },
   "cta": {
+    "eyebrow": "One last step",
     "title": "Ready for better coffee?",
     "subtitle": "Order freshly roasted coffee delivered right to your office.",
+    "tagline": "No contracts. No commitment.",
     "button": "Order now"
   },
   "product": {
@@ -99,6 +131,12 @@
     "roastDate": "Roast Date",
     "type": "Type",
     "orderThis": "Order",
+    "detailsOverline": "Details",
+    "specsTitle": "Coffee profile",
+    "tastingNotes": "Tasting notes",
+    "viewProfile": "Profile",
+    "ctaSubtitle": "Monthly deliveries straight to your office. No contracts, no hassle.",
+    "ctaOverline": "Ready?",
     "original": {
       "hero": "Strong, balanced flavor for everyday office enjoyment.",
       "description": "Coffece Original is our flagship 100% Arabica blend from Brazil. With an intensity of 4/5, it offers a rich, full-bodied taste with subtle chocolate tones and a nutty finish. Perfect for those who appreciate classic coffee without compromise.",
@@ -117,6 +155,10 @@
     "back": "Back",
     "submit": "Submit",
     "callInstead": "Rather call?",
+    "callBand": {
+      "title": "Prefer to call?",
+      "subtitle": "We'll help you order over the phone."
+    },
     "step1": {
       "title": "How big is your office?",
       "subtitle": "Select the option that best describes your space.",
@@ -141,11 +183,9 @@
     },
     "step4": {
       "title": "How often would you like delivery?",
-      "subtitle": "You can change the frequency anytime.",
-      "weekly": "Weekly",
-      "biweekly": "Bi-weekly",
+      "subtitle": "We deliver once a month or by agreement.",
       "monthly": "Monthly",
-      "onDemand": "On demand"
+      "agreement": "By agreement"
     },
     "step5": {
       "title": "Last step — your contact details",
@@ -172,6 +212,16 @@
   "contact": {
     "title": "Contact",
     "subtitle": "Have questions? Write to us or give us a call.",
+    "eyebrow": "Contact",
+    "socialLabel": "Follow us",
+    "nextSteps": {
+      "title": "What happens next?",
+      "items": [
+        "We reply within 24 hours",
+        "We tailor a quote to your office",
+        "We deliver the first shipment"
+      ]
+    },
     "form": {
       "name": "Full name",
       "email": "Email",
@@ -180,7 +230,10 @@
       "message": "Message",
       "submit": "Send message",
       "success": "Message sent. Thank you!",
-      "error": "Something went wrong. Please try again."
+      "error": "Something went wrong. Please try again.",
+      "gdpr": "I agree to the processing of personal data according to the",
+      "gdprLink": "privacy policy",
+      "gdprRequired": "Consent is required to submit the form."
     },
     "info": {
       "emailLabel": "Email",
@@ -208,6 +261,14 @@
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Can't find your answer? Contact us.",
+    "eyebrow": "FAQ",
+    "allLabel": "All",
+    "needHelp": "Need help?",
+    "bottomBand": {
+      "eyebrow": "Still have a question?",
+      "title": "Call us or get a tailored quote.",
+      "subtitle": "We answer fast. Happy to take your order over the phone."
+    },
     "categories": {
       "ordering": "Ordering",
       "delivery": "Delivery",
@@ -215,15 +276,14 @@
       "general": "General"
     },
     "items": [
-      { "q": "What is the minimum order quantity?", "a": "The minimum order is 1 kg of coffee (4 packs of 250g). For larger offices, we recommend regular deliveries.", "cat": "ordering" },
+      { "q": "What is the minimum order quantity?", "a": "The minimum order is 1 kg of coffee. For larger offices, we recommend regular deliveries.", "cat": "ordering" },
       { "q": "How do I order coffee?", "a": "Simply fill out our online form or contact us by phone. We'll prepare a custom offer for you.", "cat": "ordering" },
       { "q": "What are the payment terms?", "a": "We accept bank transfer and invoice payments. Regular customers can opt for monthly billing.", "cat": "ordering" },
       { "q": "Where do you deliver?", "a": "We deliver throughout Slovakia. For Bratislava and surrounding areas, we provide our own delivery service.", "cat": "delivery" },
-      { "q": "How often can I receive coffee?", "a": "We offer weekly, bi-weekly, or monthly deliveries. You can change the frequency at any time.", "cat": "delivery" },
+      { "q": "How often can I receive coffee?", "a": "We offer monthly deliveries or delivery by agreement. You can change the frequency at any time.", "cat": "delivery" },
       { "q": "What's the difference between Original and Gold Standard?", "a": "Original is our classic 100% Arabica blend with a full-bodied taste. Gold Standard is a premium select Arabica with a more delicate, complex flavor profile.", "cat": "products" },
-      { "q": "How long does the coffee stay fresh?", "a": "We recommend consuming within 4 weeks of roasting for the best flavor. The roast date is printed on every package.", "cat": "products" },
+      { "q": "How long does the coffee stay fresh?", "a": "Coffee stays fresh for 6 weeks from roasting — that's the window when it tastes best. The roast date is printed on every package.", "cat": "products" },
       { "q": "How should I store the coffee?", "a": "Keep in a dry, dark place in a sealed container. We don't recommend storing in the refrigerator.", "cat": "products" },
-      { "q": "Do you offer a trial order?", "a": "Yes! Your first order is commitment-free. Try our coffee and decide for yourself.", "cat": "general" },
       { "q": "Can I cancel my order anytime?", "a": "Of course. We have no long-term contracts. You can cancel or pause your order at any time.", "cat": "general" }
     ]
   },
@@ -243,11 +303,9 @@
     "learnMore": "Learn more"
   },
   "privacy": {
-    "title": "Privacy Policy",
-    "content": "This is placeholder privacy policy text. It will be replaced with actual content."
+    "title": "Privacy Policy"
   },
   "cookiesPage": {
-    "title": "Cookie Policy",
-    "content": "This is placeholder cookie policy text. It will be replaced with actual content."
+    "title": "Cookie Policy"
   }
 }

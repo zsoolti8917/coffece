@@ -18,10 +18,19 @@ export default function OriginalPage() {
     <>
       <Navbar onOrderClick={() => setOrderOpen(true)} />
       <main>
-        <ProductHero name={tProducts("name")} tagline={t("hero")}
-          imageSrc="/images/products/original-desk.jpg" variant="original"
+        <ProductHero
+          name={tProducts("name")}
+          tagline={t("hero")}
+          eyebrow={tProducts("tagline")}
+          type={tProducts("type")}
+          region={tProducts("region")}
+          intensity={4}
+          imageSrc="/images/products/original-living.png"
+          variant="original"
           decorativeBg="/images/decorative/coffee-beans-pattern.png"
-          showBeans={false} />
+          showBeans={false}
+          onOrderClick={() => setOrderOpen(true)}
+        />
         <ProductSpecs variant="original" labelSrc="/images/labels/original-label.png" />
         <ProductCta productName={tProducts("name")} variant="original"
           onOrderClick={() => setOrderOpen(true)} />

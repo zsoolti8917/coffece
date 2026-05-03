@@ -4,23 +4,22 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
-
-type ConsentValue = "accepted" | "declined";
+import { BrandButton } from "@/components/ui/brand-button";
+import { getConsent, setConsent } from "@/lib/consent";
 
 export function CookieBanner() {
   const t = useTranslations("cookie");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const stored = localStorage.getItem("cookie-consent");
-    if (!stored) {
+    if (getConsent() === null) {
       const timer = setTimeout(() => setVisible(true), 1500);
       return () => clearTimeout(timer);
     }
   }, []);
 
-  const handleConsent = (value: ConsentValue) => {
-    localStorage.setItem("cookie-consent", value);
+  const handleConsent = (value: "accepted" | "declined") => {
+    setConsent(value);
     setVisible(false);
   };
 
@@ -53,16 +52,13 @@ export function CookieBanner() {
               <div className="flex gap-3 shrink-0">
                 <button
                   onClick={() => handleConsent("declined")}
-                  className="px-4 py-2 text-sm font-medium text-gray-400 hover:text-white border border-gray-600 hover:border-gray-400 rounded-lg transition-colors"
+                  className="h-9 px-4 text-sm font-medium text-gray-400 hover:text-white border border-gray-600 hover:border-gray-400 rounded-lg transition-colors"
                 >
                   {t("decline")}
                 </button>
-                <button
-                  onClick={() => handleConsent("accepted")}
-                  className="px-4 py-2 text-sm font-medium bg-brand-gold hover:bg-brand-gold-dark text-black rounded-lg transition-colors"
-                >
+                <BrandButton size="sm" icon="none" onClick={() => handleConsent("accepted")}>
                   {t("accept")}
-                </button>
+                </BrandButton>
               </div>
             </div>
           </div>

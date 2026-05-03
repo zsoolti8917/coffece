@@ -18,10 +18,19 @@ export default function ZlatyStandardPage() {
     <>
       <Navbar onOrderClick={() => setOrderOpen(true)} variant="light" />
       <main>
-        <ProductHero name={tProducts("name")} tagline={t("hero")}
-          imageSrc="/images/products/zlaty-kitchen.jpg" variant="zlaty"
+        <ProductHero
+          name={tProducts("name")}
+          tagline={t("hero")}
+          eyebrow={tProducts("tagline")}
+          type={tProducts("type")}
+          region={tProducts("region")}
+          intensity={2.5}
+          imageSrc="/images/products/zlaty-office.png"
+          variant="zlaty"
           decorativeBg="/images/decorative/coffee-plant.png"
-          showBeans={false} />
+          showBeans={false}
+          onOrderClick={() => setOrderOpen(true)}
+        />
         <ProductSpecs variant="zlaty" labelSrc="/images/labels/zlaty-label.png" />
         <ProductCta productName={tProducts("name")} variant="zlaty"
           onOrderClick={() => setOrderOpen(true)} />

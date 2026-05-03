@@ -1,14 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { CalendarDays, CalendarRange, Calendar, Clock } from "lucide-react";
+import { Calendar, Handshake } from "lucide-react";
 import { OptionCard } from "./option-card";
 
 const options = [
-  { value: "weekly", key: "weekly", icon: <CalendarDays className="h-6 w-6" /> },
-  { value: "biweekly", key: "biweekly", icon: <CalendarRange className="h-6 w-6" /> },
   { value: "monthly", key: "monthly", icon: <Calendar className="h-6 w-6" /> },
-  { value: "onDemand", key: "onDemand", icon: <Clock className="h-6 w-6" /> },
+  { value: "agreement", key: "agreement", icon: <Handshake className="h-6 w-6" /> },
 ] as const;
 
 interface Props {

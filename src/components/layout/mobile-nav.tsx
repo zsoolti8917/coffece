@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Button } from "@/components/ui/button";
+import { BrandButton } from "@/components/ui/brand-button";
 import { Menu } from "lucide-react";
 import { LanguageToggle } from "./language-toggle";
 
@@ -46,15 +46,16 @@ export function MobileNav({
             </Link>
           ))}
 
-          <Button
+          <BrandButton
+            size="lg"
             onClick={() => {
               setOpen(false);
               onOrderClick();
             }}
-            className="bg-brand-gold text-brand-black hover:bg-brand-gold/90 font-bold mt-6 h-12 text-base"
+            className="mt-6 w-full"
           >
             {t("order")}
-          </Button>
+          </BrandButton>
 
           <div className="mt-6 pt-6 border-t flex justify-start">
             <LanguageToggle className="text-foreground hover:text-brand-gold" />
