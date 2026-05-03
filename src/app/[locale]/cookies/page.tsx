@@ -58,8 +58,8 @@ function H2({ children }: { children: React.ReactNode }) {
   return <h2 className="text-xl font-bold text-brand-black mt-10 mb-3">{children}</h2>;
 }
 
-function P({ children }: { children: React.ReactNode }) {
-  return <p className="text-gray-700 leading-relaxed mb-4">{children}</p>;
+function P({ children, className = "" }: { children: React.ReactNode; className?: string }) {
+  return <p className={`text-gray-700 leading-relaxed mb-4 ${className}`}>{children}</p>;
 }
 
 function UL({ children }: { children: React.ReactNode }) {
