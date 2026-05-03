@@ -126,7 +126,7 @@ export default function FaqPage() {
         <section className="container mx-auto px-4 lg:px-8 py-20 lg:py-24">
           <div className="grid lg:grid-cols-[260px_1fr] xl:grid-cols-[280px_1fr] gap-12 lg:gap-16 items-start">
             {/* Left rail */}
-            <aside className="lg:sticky lg:top-24">
+            <aside className="min-w-0 lg:sticky lg:top-24">
               <p className="text-[10px] uppercase tracking-[0.3em] font-semibold text-brand-gold mb-5">
                 {t("eyebrow")}
               </p>
@@ -293,7 +293,7 @@ export default function FaqPage() {
                     <p className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-semibold mb-0.5">
                       {tContact("phoneLabel")}
                     </p>
-                    <p className="text-2xl md:text-3xl font-extrabold tracking-tight whitespace-nowrap">
+                    <p className="text-xl sm:text-2xl md:text-3xl font-extrabold tracking-tight whitespace-nowrap">
                       {phone}
                     </p>
                   </div>
