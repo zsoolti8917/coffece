@@ -38,7 +38,7 @@ export function WorkTimeline() {
           <div className="absolute left-8 lg:left-1/2 lg:-translate-x-1/2 top-0 bottom-0 w-px bg-white/10" />
           <motion.div
             style={{ height: lineHeight }}
-            className="absolute left-8 lg:left-1/2 lg:-translate-x-1/2 top-0 w-px bg-gradient-to-b from-brand-gold via-brand-gold to-brand-gold/0 origin-top"
+            className="absolute left-8 lg:left-1/2 lg:-translate-x-1/2 top-0 w-px bg-brand-gold origin-top"
           />
 
           <div className="space-y-16 lg:space-y-24">

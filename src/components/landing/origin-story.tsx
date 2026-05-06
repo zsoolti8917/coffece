@@ -83,18 +83,6 @@ export function OriginStory() {
                 <span aria-hidden className="absolute bottom-3 left-3 h-5 w-5 border-b-2 border-l-2 border-brand-gold rounded-bl-md" />
                 <span aria-hidden className="absolute bottom-3 right-3 h-5 w-5 border-b-2 border-r-2 border-brand-gold rounded-br-md" />
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6, rotate: 15 }}
-                whileInView={{ opacity: 1, scale: 1, rotate: 8 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ delay: 0.6, duration: 0.7, type: "spring", stiffness: 180 }}
-                className="absolute -top-6 -right-6 lg:-right-10 w-24 h-24 lg:w-28 lg:h-28 rounded-full bg-brand-gold text-brand-black flex flex-col items-center justify-center font-extrabold shadow-2xl ring-4 ring-brand-black"
-              >
-                <span className="text-[9px] tracking-[0.3em] uppercase">Single</span>
-                <span className="text-2xl lg:text-3xl leading-none my-0.5">100%</span>
-                <span className="text-[9px] tracking-[0.3em] uppercase">Origin</span>
-              </motion.div>
             </motion.div>
 
             <motion.div

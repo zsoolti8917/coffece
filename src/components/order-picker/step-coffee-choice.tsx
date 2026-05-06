@@ -17,7 +17,7 @@ export function StepCoffeeChoice({ value, onChange }: Props) {
     <div>
       <h2 className="text-2xl font-extrabold mb-2 tracking-tight">{t("title")}</h2>
       <p className="text-muted-foreground mb-6">{t("subtitle")}</p>
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         <OptionCard title={tProducts("original.name")} selected={value === "original"}
           onClick={() => onChange("original", tProducts("original.name"))}>
           <div className="relative w-20 h-20 mx-auto mb-3 bg-brand-black rounded-lg overflow-hidden">
@@ -36,8 +36,12 @@ export function StepCoffeeChoice({ value, onChange }: Props) {
           <span className="text-xs text-muted-foreground block text-center">{tProducts("zlaty.type")}</span>
         </OptionCard>
 
-        <OptionCard title={t("both")} selected={value === "both"}
-          onClick={() => onChange("both", t("both"))}>
+        <OptionCard
+          className="col-span-2 sm:col-span-1"
+          title={t("both")}
+          selected={value === "both"}
+          onClick={() => onChange("both", t("both"))}
+        >
           <div className="relative w-20 h-20 mx-auto mb-3 rounded-lg overflow-hidden bg-gradient-to-br from-brand-black to-brand-gold-light">
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="text-white text-xs font-bold drop-shadow-lg">Mix</span>

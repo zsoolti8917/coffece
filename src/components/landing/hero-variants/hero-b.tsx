@@ -28,7 +28,7 @@ export function HeroB({ onOrderClick }: HeroVariantProps) {
     <section className="relative min-h-screen flex flex-col bg-brand-black overflow-hidden">
       <FloatingBeans count={{ base: 50, md: 130, lg: 250 }} />
 
-      <div className="container mx-auto px-4 lg:px-8 relative z-10 flex items-center flex-1 py-24 lg:py-0">
+      <div className="container mx-auto px-4 lg:px-8 relative z-10 flex items-center flex-1 py-24 lg:pt-40 lg:pb-12">
         <div className="grid lg:grid-cols-[1.3fr_1fr] gap-10 lg:gap-16 items-center w-full">
           <div className="relative">
             <motion.div

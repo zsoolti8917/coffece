@@ -44,8 +44,8 @@ export function Navbar({ onOrderClick, variant = "dark" }: { onOrderClick: () =>
             alt="Coffece"
             width={400}
             height={118}
-            className={`w-auto transition-[height] duration-300 ease-out ${
-              scrolled ? "h-24 lg:h-36" : "h-36 lg:h-52"
+            className={`w-auto transition-[height] duration-300 ease-out h-24 ${
+              scrolled ? "lg:h-36" : "lg:h-52"
             } ${scrolled || variant === "light" ? "mix-blend-multiply" : "mix-blend-screen"}`}
             priority
           />

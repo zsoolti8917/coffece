@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
@@ -55,6 +55,15 @@ export function OrderModal({ open, onClose, preselectedCoffee }: OrderModalProps
   });
 
   const [answers, setAnswers] = useState<Record<number, string>>({});
+
+  useEffect(() => {
+    if (!open) return;
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [open]);
 
   const updateField = useCallback(
     <K extends keyof OrderFormData>(key: K, value: OrderFormData[K], label?: string) => {
@@ -148,7 +157,7 @@ export function OrderModal({ open, onClose, preselectedCoffee }: OrderModalProps
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
         className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={onClose} />
       <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 40 }}
-        className="relative mx-auto my-4 lg:my-8 w-full max-w-6xl bg-background rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+        className="relative mx-auto my-4 lg:my-8 w-full max-w-6xl 2xl:max-w-[1600px] bg-background rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
 
         {/* Left panel (desktop) */}
         <div className="hidden lg:flex flex-col w-[320px] bg-brand-black p-6 shrink-0">
@@ -184,7 +193,7 @@ export function OrderModal({ open, onClose, preselectedCoffee }: OrderModalProps
             className="hidden lg:flex self-end items-center gap-1 text-sm text-muted-foreground hover:text-foreground mb-2">
             {t("close")} <X className="h-4 w-4" />
           </button>
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div key={step} custom={direction} variants={slideVariants}
                 initial="enter" animate="center" exit="exit"
@@ -202,15 +211,17 @@ export function OrderModal({ open, onClose, preselectedCoffee }: OrderModalProps
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-brand-gold/15 text-brand-gold transition group-hover:bg-brand-gold/25">
                   <Phone className="h-6 w-6" />
                 </span>
-                <div className="flex-1 min-w-0">
-                  <p className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-semibold mb-0.5">
-                    {t("callBand.title")}
+                <div className="flex-1 min-w-0 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 sm:gap-4">
+                  <div className="min-w-0">
+                    <p className="text-[10px] uppercase tracking-[0.25em] text-brand-gold font-semibold mb-0.5">
+                      {t("callBand.title")}
+                    </p>
+                    <p className="text-xs text-white/60 hidden sm:block">{t("callBand.subtitle")}</p>
+                  </div>
+                  <p className="text-lg sm:text-xl lg:text-2xl font-extrabold text-white tracking-tight whitespace-nowrap">
+                    {tContact("phone")}
                   </p>
-                  <p className="text-xs text-white/60 hidden sm:block">{t("callBand.subtitle")}</p>
                 </div>
-                <p className="text-xl lg:text-2xl font-extrabold text-white tracking-tight whitespace-nowrap">
-                  {tContact("phone")}
-                </p>
               </a>
               <div className="flex items-center justify-between pt-6 border-t mt-6">
                 {step > 1 ? (
