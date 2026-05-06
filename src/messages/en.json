@@ -213,7 +213,6 @@
     "title": "Contact",
     "subtitle": "Have questions? Write to us or give us a call.",
     "eyebrow": "Contact",
-    "socialLabel": "Follow us",
     "nextSteps": {
       "title": "What happens next?",
       "items": [
@@ -239,9 +238,7 @@
       "emailLabel": "Email",
       "email": "info@coffece.sk",
       "phoneLabel": "Phone",
-      "phone": "+421 xxx xxx xxx",
-      "addressLabel": "Address",
-      "address": "Street 123, 010 01 City, Slovakia"
+      "phone": "+421 949 265 807"
     },
     "orderCta": "Build your custom non-binding offer",
     "orderCtaOverline": "ORDER",
@@ -291,7 +288,6 @@
     "tagline": "Fresh coffee for your office",
     "nav": "Navigation",
     "contactTitle": "Contact",
-    "social": "Social",
     "privacy": "Privacy Policy",
     "cookies": "Cookies",
     "rights": "All rights reserved."

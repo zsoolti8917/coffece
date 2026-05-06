@@ -75,15 +75,15 @@ function SlovakPrivacy() {
         2016/679 (ďalej len „GDPR&ldquo;) a zákona č. 18/2018 Z. z. o ochrane osobných údajov je:
       </P>
       <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-gray-700 leading-relaxed mb-4">
-        <strong>[Coffece, s. r. o.]</strong>
+        <strong>Innovation One, s. r. o.</strong>
         <br />
-        [Sídlo: ulica a číslo, PSČ Mesto, Slovenská republika]
+        Sídlo: 468, Čierna Voda, 925 06, Slovenská republika
         <br />
-        [IČO: __________]
+        IČO: 51166429
         <br />
-        [DIČ: __________]
+        DIČ: 2120616036
         <br />
-        [Zapísaná v Obchodnom registri Okresného súdu __________, oddiel __________, vložka __________]
+        Zapísaná v Obchodnom registri Okresného súdu Trnava, oddiel Sro, vložka č. 40954/T
         <br />
         E-mail: <a href="mailto:info@coffece.sk" className="text-brand-gold-dark hover:underline">info@coffece.sk</a>
       </div>
@@ -258,16 +258,16 @@ function EnglishPrivacy() {
         (the &ldquo;GDPR&rdquo;) and Act No. 18/2018 Coll. on the protection of personal data is:
       </P>
       <div className="rounded-xl border border-gray-200 bg-gray-50 p-5 text-gray-700 leading-relaxed mb-4">
-        <strong>[Coffece, s. r. o.]</strong>
+        <strong>Innovation One, s. r. o.</strong>
         <br />
-        [Registered office: street and number, postal code, city, Slovak Republic]
+        Registered office: 468, Čierna Voda, 925 06, Slovak Republic
         <br />
-        [Company ID (IČO): __________]
+        Company ID (IČO): 51166429
         <br />
-        [Tax ID (DIČ): __________]
+        Tax ID (DIČ): 2120616036
         <br />
-        [Registered in the Commercial Register of the District Court of __________, section __________,
-        insert __________]
+        Registered in the Commercial Register of the District Court of Trnava, section Sro, insert No.
+        40954/T
         <br />
         Email:{" "}
         <a href="mailto:info@coffece.sk" className="text-brand-gold-dark hover:underline">

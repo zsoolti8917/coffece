@@ -213,7 +213,6 @@
     "title": "Kontakt",
     "subtitle": "Máte otázky? Napíšte nám alebo zavolajte.",
     "eyebrow": "Kontakt",
-    "socialLabel": "Sledujte nás",
     "nextSteps": {
       "title": "Čo bude ďalej?",
       "items": [
@@ -239,9 +238,7 @@
       "emailLabel": "Email",
       "email": "info@coffece.sk",
       "phoneLabel": "Telefón",
-      "phone": "+421 xxx xxx xxx",
-      "addressLabel": "Adresa",
-      "address": "Ulica 123, 010 01 Mesto, Slovensko"
+      "phone": "+421 949 265 807"
     },
     "orderCta": "Vytvorte si nezáväznú ponuku na mieru",
     "orderCtaOverline": "OBJEDNÁVKA",
@@ -291,7 +288,6 @@
     "tagline": "Čerstvá káva pre váš office",
     "nav": "Navigácia",
     "contactTitle": "Kontakt",
-    "social": "Sociálne siete",
     "privacy": "Ochrana súkromia",
     "cookies": "Cookies",
     "rights": "Všetky práva vyhradené."
